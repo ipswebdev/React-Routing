@@ -1,0 +1,28 @@
+.dropdown{
+    position: relative;
+    &__item{
+        border-bottom: 1px solid black;
+    }
+    &__content{
+        padding: 10px;
+        opacity: 0;
+        height: 0;
+        transition: height 200ms ease-in-out,opacity 180ms ease-in-out;
+        width: 150px;
+        background-color: #fff;
+        border: 2px solid black;
+        border-radius: 4px;
+    }
+    &.open{
+        .dropdown__content{
+            opacity: 1;
+            height: 100%;
+            top: 30px;
+            left: 0;
+            right: 0;
+            transition: height 200ms ease-in-out,opacity 180ms ease-in-out;
+            max-height: 100px;
+            overflow-y: auto;
+        }
+    }
+}
