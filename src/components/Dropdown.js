@@ -7,7 +7,6 @@ function Dropdown({selectedItem,items,onSelect}){
     const divParent = useRef();
     useEffect(()=>{
         const handler = (event) => {
-            console.log(divParent)
             if(!divParent ||  !divParent.current){
                 return;
             }

@@ -7,7 +7,6 @@ function NavigationProvider({children}){
     const [currentPath, setCurrentPath] = useState(urlPath)
 
     const navigate = (toUrl,event={}) => {
-        console.log('navigate',(event.metaKey || event.ctrlKey));
         if((event.metaKey || event.ctrlKey)){
             return ;
         }

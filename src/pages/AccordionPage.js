@@ -45,8 +45,6 @@ function AccordionPage(){
       });
 
       openStateToggle(toggledItems);
-
-      console.log('click',items);
     };
 
     return (

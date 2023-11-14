@@ -27,7 +27,6 @@ function DropdownPage() {
   const onSelect = (value) => {
     let selectedItem = dropdownItems.filter(item=> item.value === value);
     setSelected(selectedItem[0]);
-    console.log('selected',selectedItem[0])
   }
 
   

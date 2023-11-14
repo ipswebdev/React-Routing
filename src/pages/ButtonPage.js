@@ -2,20 +2,13 @@ import Button from "../components/Button"
 import { useState } from 'react';
 
 function ButtonPage(){
-
-      // Button Data
-
   const onClick = () => {
-    
   }
   const onMouseEnter = () => {
-    
   }
   const onMouseLeave = () => {
-    // console.log('leave!')
   }
   const onMouseOver = () => {
-    // console.log('Over!')
   }
   return (
     <div>
