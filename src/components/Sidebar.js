@@ -13,6 +13,10 @@ function Sidebar(){
         {
             label:'Button',
             path:'/button',
+        },
+        {
+            label:'Modal',
+            path:'/modal',
         }
     ]
     return (
@@ -20,11 +24,10 @@ function Sidebar(){
             {links.map(
                 (link)=>{
                     return(
-                        <div>
+                        <div key={link.label}>
                             <Link toUrl={link.path}>{link.label}</Link>
                         </div>
-                    ) 
-                    
+                    )
                 }
                 )
             }

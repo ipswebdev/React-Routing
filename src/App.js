@@ -2,11 +2,17 @@ import ButtonPage from './pages/ButtonPage';
 import AccordionPage from './pages/AccordionPage';
 import { useState } from 'react';
 import DropdownPage from './pages/DropdownPage';
-import Link from './components/Link'
+import ModalPage from './pages/ModalPage';
 import RouteRenderer from './components/RouteRenderer';
 import Sidebar from './components/Sidebar';
 
 function App() { 
+  const [modalState, setModalState] = useState(false);
+
+  const changeModalState = (state) => {
+    console.log('backdrop click! state',state)
+    setModalState(state);
+  } 
   return (
     <div>
       <Sidebar/>
@@ -18,6 +24,9 @@ function App() {
       </RouteRenderer>
       <RouteRenderer path="/button">
         <ButtonPage></ButtonPage>
+      </RouteRenderer>
+      <RouteRenderer path="/modal">
+        <ModalPage onBackdropClick={(state)=> changeModalState(state)} show={modalState}></ModalPage>
       </RouteRenderer>
     </div>
     
