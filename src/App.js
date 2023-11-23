@@ -5,6 +5,7 @@ import DropdownPage from './pages/DropdownPage';
 import ModalPage from './pages/ModalPage';
 import RouteRenderer from './components/RouteRenderer';
 import Sidebar from './components/Sidebar';
+import TablePage from './pages/TablePage';
 
 function App() { 
   const [modalState, setModalState] = useState(false);
@@ -27,6 +28,9 @@ function App() {
       </RouteRenderer>
       <RouteRenderer path="/modal">
         <ModalPage onBackdropClick={(state)=> changeModalState(state)} show={modalState}></ModalPage>
+      </RouteRenderer>
+      <RouteRenderer path="/table">
+        <TablePage></TablePage>
       </RouteRenderer>
     </div>
     

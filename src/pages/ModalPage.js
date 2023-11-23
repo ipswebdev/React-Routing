@@ -8,10 +8,12 @@ function ModalPage({show,onBackdropClick}){
     const handleClose= () => {
         setShowModal(false)
     }
-    const actions = <button onClick={handleClose}>I Accept</button>;
+    const actions = <button style={{position:'relative',zIndex:2}} onClick={handleClose}>I Accept</button>;
     const modal = (
     <Modal actionBar={actions} toggleState={handleClose}>
-        <p>Accept the agreement to proceed</p>
+        <p style={{position:'relative',zIndex:2}}>
+            Accept the agreement to proceed
+        </p>
     </Modal>
     )
     return (
