@@ -6,6 +6,7 @@ import ModalPage from './pages/ModalPage';
 import RouteRenderer from './components/RouteRenderer';
 import Sidebar from './components/Sidebar';
 import TablePage from './pages/TablePage';
+import CounterPage from './pages/CounterPage';
 
 function App() { 
   const [modalState, setModalState] = useState(false);
@@ -31,6 +32,9 @@ function App() {
       </RouteRenderer>
       <RouteRenderer path="/table">
         <TablePage></TablePage>
+      </RouteRenderer>
+      <RouteRenderer path="/counter">
+        <CounterPage initialCount={20} />
       </RouteRenderer>
     </div>
     

@@ -10,7 +10,6 @@ function  Link({children,toUrl}){
     }
     return (
         <a style={{'display':'inline-block','marginBottom':  '20px','borderLeft': currentPath === toUrl ?  '2px solid red' : '','fontWeight': currentPath === toUrl ?  'bold' : '','color': currentPath === toUrl ?  'red' : 'blue','paddingLeft':  '10px'}} onClick={handleClick} href={toUrl}>
-           
             {children}
         </a>
     )
