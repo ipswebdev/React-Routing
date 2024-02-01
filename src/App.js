@@ -1,12 +1,13 @@
 import ButtonPage from './pages/ButtonPage';
 import AccordionPage from './pages/AccordionPage';
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import DropdownPage from './pages/DropdownPage';
 import ModalPage from './pages/ModalPage';
 import RouteRenderer from './components/RouteRenderer';
 import Sidebar from './components/Sidebar';
 import TablePage from './pages/TablePage';
 import CounterPage from './pages/CounterPage';
+import PracticeContext from './context/PracticeContext';
 
 function App() { 
   const [modalState, setModalState] = useState(false);
@@ -15,6 +16,9 @@ function App() {
     console.log('backdrop click! state',state)
     setModalState(state);
   } 
+
+  // const SampleData = useContext(PracticeContext)
+  // console.log(SampleData)
   return (
     <div>
       <Sidebar/>
@@ -37,6 +41,10 @@ function App() {
         <CounterPage initialCount={20} />
       </RouteRenderer>
     </div>
+
+    // <div>
+    //   Sample Context!
+    // </div>
     
   )
 
